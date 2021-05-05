@@ -5,11 +5,10 @@
         <title>Edit user</title>
     </head>
     <body>
-        <form action="" method="post">
-            {% csrf_token %}
-            Username: <input type="text" name="name" placeholder="{{ name }}"> <br>
-            E-mail: <input type="email" name="email" placeholder="{{ email }}"> <br>
-            <input type="submit">
-        </form>
+        <h1>Edit user:</h1>
+            <form method="post">{% csrf_token %}
+                {{ form.as_p }}
+                <input type="submit" value="Update">
+            </form>
     </body>
 </html>

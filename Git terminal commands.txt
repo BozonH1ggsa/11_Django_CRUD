@@ -1,5 +1,0 @@
-git init   (creates git folder in the directory you are now)
-git add .
-git commit -m "my commit"
-git remote add origin <remote repository folder URL>
-git push origin master

@@ -19,9 +19,9 @@ import CRUD.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', CRUD.views.index),
-    path('add_user/', CRUD.views.add_user),
-    path('get_user/<int:user_id>', CRUD.views.get_user),
-    path('edit_user/<int:user_id>', CRUD.views.edit_user),
-    path('delete_user/<int:user_id>', CRUD.views.delete_user),
+    path('', CRUD.views.UserListView.as_view(), name='user-list'),
+    path('add_user/', CRUD.views.AddUserView.as_view()),
+    path('get_user/<int:user_id>', CRUD.views.GetUserDetailView.as_view(), name='user-detail'),
+    path('edit_user/<int:user_id>', CRUD.views.UpdateUserView.as_view(), name='edit_user'),
+    path('delete_user/<int:user_id>', CRUD.views.DeleteUserView.as_view(), name='delete-user'),
 ]
